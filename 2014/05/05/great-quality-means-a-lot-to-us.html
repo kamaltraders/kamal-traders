@@ -13,21 +13,16 @@
   </head>
   <body>
     <div class = "container">
-      <div class = "mar20 brand-logo center"
-        <a style = "cursor:pointer;"href = "#!"><img src='/images/logo_1.jpg'>
+      <div class = "mar20 brand-logo center">
+        <a style = "cursor:pointer;"href = "#!">Kamal Traders</a>
+        <!--<img src='/images/logo_1.jpg'>-->
       </div>
 
         <nav style = "background-color:#ee6e73;" >
           <ul class = blue-text text-darken-4>
-            <li><a class = "bold white-text" href = "home.html">Home</a></li>
-            <li><a  class = "white-text" href = "">3d printers</a></li>
-            <li><a   class = "white-text" href = "">3d materials</a></li>
-            <li><a  class = "white-text"  href = "">Services</a></li>
-            <li><a   class = "white-text" href = "services.html">Support</a></li>
-            <li><a   class = "white-text" href = "">Company</a></li>
-            <li><a  class = "white-text"  href = "estimate.html">Blog</a></li>
+            <li><a class = "bold white-text" href = "index.html">Home</a></li>
             <li><a  class = "white-text"  href = "contact.html">Contact Us</a></li>
-
+            <li><a  class = "white-text"  href = "products.html">Products</a></li>
           </ul>
         </nav>
         <p><img src="/images/blog-people.jpg" alt="computers"></p>
@@ -62,27 +57,18 @@
     <footer style = "width:100%;background-color:#ee6e73" class="white-text page-footer">
       <div class="container">
         <div class="row">
-          <div class="col l6 s12">
-            <p>You can use rows and columns here to organize your footer content.</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
+          <div class="col l4 s12">
             <ul>
-              <li><a class = "white-text" href="#!">Home</a></li>
-              <li><a class = "white-text"  href="#!">3D Printers</a></li>
-              <li><a class = "white-text"   href="#!">3D Materials</a></li>
-              <li><a class = "white-text"   href="#!">Services</a></li>
-               <li><a class = "white-text"   href="#!">Support</a></li> 
-               <li><a class = "white-text"   href="#!">Company</a></li> 
-               <li><a class = "white-text"   href="#!">Blog</a></li> 
-              <li><a class = "white-text"   href="#!">Contact Us</a></li> 
-
-             </ul>
+              <li><a class = "white-text" href="index.html">Home</a></li>
+              <li><a class = "white-text"   href="contact.html">Contact Us</a></li>
+              <li><a class = "white-text"   href="products.html">Products</a></li>  
+            </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2015 Copyright 3digiprints
+          © 2015 Copyright Kamal Traders
         </div>
       </div>
     </footer> 
@@ -97,6 +83,14 @@
 $(document).ready(function(){
   $('.slider').slider({full_width: true});
   $('select').material_select();
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  } else {
+    $('#callmebutton').attr('href', '#');
+
+    $("#callmebutton").on( "click", function() {
+      $('#callmebutton').replaceWith('<p class="small button" id="callmebutton">Call Me on 9987760244</p>');
+    });
+  }
 });
     </script>
   </body>
