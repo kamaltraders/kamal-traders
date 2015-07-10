@@ -14,8 +14,11 @@ $categories = db_query($sql, $link);
 foreach($categories as $category) {
 	$sql1 = "SELECT * FROM cat_to_prod cp LEFT JOIN product p ON (cp.product_id = p.id) WHERE cp.category_id = '".$category['category_id']."'";
 	$products = db_query($sql1, $link);
-	print_r($products);
-	exit;
+	$fp = fopen('categoryproduct'.$category['category_id'].'.csv', 'w');
+
+	foreach ($products as $product) {
+	    fputcsv($fp, $product);
+	}
 }
 
 function db_query($sql, $db) {

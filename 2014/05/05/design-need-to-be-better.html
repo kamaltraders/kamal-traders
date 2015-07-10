@@ -23,9 +23,9 @@
       <nav>
          <ul class = blue-text text-darken-4>
            <li><a style="color:#909090;" class = "bold" href = "index.html">Home</a></li>
-           <li><a style="color:#909090;" class = ""  href = "categories_30.html">Torans</a></li>
-           <li><a style="color:#909090;" class = ""  href = "categories_31.html">Bouquet</a></li>
-           <li><a style="color:#909090;" class = ""  href = "categories_32.html">Flower Gate</a></li>
+           <li><a style="color:#909090;" class = ""  href = "category_30.html">Torans</a></li>
+           <li><a style="color:#909090;" class = ""  href = "category_31.html">Bouquet</a></li>
+           <li><a style="color:#909090;" class = ""  href = "category_32.html">Flower Gate</a></li>
            <li><a style="color:#909090;" class = ""  href = "categories.html">All Categories</a></li>
 
          </ul>
@@ -103,6 +103,31 @@ $(document).ready(function(){
       $('#callmebutton').replaceWith('<p class="small button" id="callmebutton">Call Me on 9987760244</p>');
     });
   }
+});
+
+$(function () {
+  $('#emailLink').on('click', function (event) {
+    event.preventDefault();
+    
+    var email1 = 'aaron@kodeplay.com';
+    var subject = 'New Order Placed';
+
+    name = $('#name').val();
+    email = $('#email').val();
+    phone = $('#phone').val();
+    textarea1 = encodeURIComponent($('#textarea1').val());
+    //textarea1 = textarea1.replace('\n', '%0D%0A');
+    
+    body_content = 'Name : ' + name + '%0D%0A';
+    body_content += 'Email : ' + email + '%0D%0A';
+    body_content += 'Phone : ' + phone + '%0D%0A';
+    body_content += 'Message : ' + textarea1 + '%0D%0A';
+
+    var emailBody = body_content;
+
+    //var emailBody = 'Some blah%0D%0ASome blah';
+    window.location = 'mailto:' + email1 + '?subject=' + subject + '&body=' +   emailBody;
+  });
 });
     </script>
   </body>

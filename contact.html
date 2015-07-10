@@ -23,9 +23,9 @@
       <nav>
          <ul class = blue-text text-darken-4>
            <li><a style="color:#909090;" class = "bold" href = "index.html">Home</a></li>
-           <li><a style="color:#909090;" class = ""  href = "categories_30.html">Torans</a></li>
-           <li><a style="color:#909090;" class = ""  href = "categories_31.html">Bouquet</a></li>
-           <li><a style="color:#909090;" class = ""  href = "categories_32.html">Flower Gate</a></li>
+           <li><a style="color:#909090;" class = ""  href = "category_30.html">Torans</a></li>
+           <li><a style="color:#909090;" class = ""  href = "category_31.html">Bouquet</a></li>
+           <li><a style="color:#909090;" class = ""  href = "category_32.html">Flower Gate</a></li>
            <li><a style="color:#909090;" class = ""  href = "categories.html">All Categories</a></li>
 
          </ul>
@@ -37,36 +37,30 @@
   <form class="col s12">
     <div class="row">
       <div class="input-field col s6">
-        <input placeholder="Please Enter Name" id="first_name" type="text" class="validate">
-        <label class = "active" for="first_name">Name</label>
+        <input type="hidden" name="utf8" value="✓">
+        <input placeholder="Please Enter Name" id="name" name="name" type="text" class="validate">
+        <label class = "active" for="name">Name</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s6">
-        <input id="email" type="email" class="validate">
+        <input id="email" type="email" name="email" class="validate">
         <label for="email">Email</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s6">
-        <input id="phone" type="tel" class="validate">
+        <input id="phone" type="tel" name="phone" class="validate">
         <label for="phone">Phone</label>
       </div>
     </div>
-    <label>Choose Category For Message</label>
-    <select class="browser-default">
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
     <div class="row">
       <div class="input-field col s12">
-        <textarea id="textarea1" class="materialize-textarea"></textarea>
+        <textarea id="textarea1" class="materialize-textarea" name="message" style="white-space: pre-wrap;"></textarea>
         <label for="textarea1">Your message</label>
       </div>
     </div>
-    <button class="blue darken-3 btn waves-effect waves-light" type="submit" name="action">Submit
+    <button class="blue darken-3 btn waves-effect waves-light" type="submit" id="emailLink" name="action">Submit
       <i class="mdi-content-send right"></i>
     </button>
   </form>
@@ -119,6 +113,31 @@ $(document).ready(function(){
       $('#callmebutton').replaceWith('<p class="small button" id="callmebutton">Call Me on 9987760244</p>');
     });
   }
+});
+
+$(function () {
+  $('#emailLink').on('click', function (event) {
+    event.preventDefault();
+    
+    var email1 = 'aaron@kodeplay.com';
+    var subject = 'New Order Placed';
+
+    name = $('#name').val();
+    email = $('#email').val();
+    phone = $('#phone').val();
+    textarea1 = encodeURIComponent($('#textarea1').val());
+    //textarea1 = textarea1.replace('\n', '%0D%0A');
+    
+    body_content = 'Name : ' + name + '%0D%0A';
+    body_content += 'Email : ' + email + '%0D%0A';
+    body_content += 'Phone : ' + phone + '%0D%0A';
+    body_content += 'Message : ' + textarea1 + '%0D%0A';
+
+    var emailBody = body_content;
+
+    //var emailBody = 'Some blah%0D%0ASome blah';
+    window.location = 'mailto:' + email1 + '?subject=' + subject + '&body=' +   emailBody;
+  });
 });
     </script>
   </body>
