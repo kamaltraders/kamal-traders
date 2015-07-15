@@ -18,16 +18,18 @@
           <img src='images/kamal_traders.png' style="height:60px;">
         </a>
       </div>
-
+      <div style="display:inline-block;float:right;">
+        <a id="callmebutton_1" style="color:#909090;" class = "" href="tel:9999999999">call now - 9999999999</a>
+      </div>
         
       <nav>
          <ul class = blue-text text-darken-4>
            <li><a style="color:#909090;" class = "bold" href = "index.html">Home</a></li>
-           <li><a style="color:#909090;" class = ""  href = "category_30.html">Torans</a></li>
-           <li><a style="color:#909090;" class = ""  href = "category_31.html">Bouquet</a></li>
-           <li><a style="color:#909090;" class = ""  href = "category_32.html">Flower Gate</a></li>
+           <li><a style="color:#909090;" class = ""  href = "torans.html">Torans</a></li>
+           <li><a style="color:#909090;" class = ""  href = "bouquet.html">Bouquet</a></li>
+           <li><a style="color:#909090;" class = ""  href = "flower-gate.html">Flower Gate</a></li>
            <li><a style="color:#909090;" class = ""  href = "categories.html">All Categories</a></li>
-
+           <li><a style="color:#909090;" class = ""  href = "aboutus.html">About Us</a></li>
          </ul>
       </nav>
         <div class="top-mar20 slider">
@@ -77,10 +79,10 @@
     <div class = "col s6 m3 l3">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <a href="product_233.html"><img class="activator" src="images/galleries/233/thumb/622--TORAN.jpg" style="height: 169px;"></a>
+          <a href="toran-622.html"><img class="activator" src="images/galleries/233/thumb/622--TORAN.jpg" style="height: 169px;"></a>
         </div>
         <div class="card-content">
-          <p><a href="product_233.html" style="color:#17a2a2;">TORAN-622</a></p>
+          <p><a href="toran-622.html" style="color:#17a2a2;">TORAN-622</a></p>
         </div>
         
       </div>
@@ -89,10 +91,10 @@
     <div class = "col s6 m3 l3">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <a href="product_231.html"><img class="activator" src="images/galleries/231/thumb/DSC_0741.jpg" style="height: 169px;"></a>
+          <a href="loose-flower-620.html"><img class="activator" src="images/galleries/231/thumb/DSC_0741.jpg" style="height: 169px;"></a>
         </div>
         <div class="card-content">
-          <p><a href="product_231.html" style="color:#17a2a2;">Loose Flower-620</a></p>
+          <p><a href="loose-flower-620.html" style="color:#17a2a2;">Loose Flower-620</a></p>
         </div>
         
       </div>
@@ -101,10 +103,10 @@
     <div class = "col s6 m3 l3">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <a href="product_227.html"><img class="activator" src="images/galleries/227/thumb/612%20flower%20gate.jpg?1352909261" style="height: 169px;"></a>
+          <a href="flower-gate-612.html"><img class="activator" src="images/galleries/227/thumb/612%20flower%20gate.jpg?1352909261" style="height: 169px;"></a>
         </div>
         <div class="card-content">
-          <p><a href="product_227.html" style="color:#17a2a2;">Flower gate-612</a></p>
+          <p><a href="flower-gate-612.html" style="color:#17a2a2;">Flower gate-612</a></p>
         </div>
         
       </div>
@@ -113,10 +115,10 @@
     <div class = "col s6 m3 l3">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <a href="product_198.html"><img class="activator" src="images/galleries/198/thumb/116-toran-6ft.jpg?1352909261" style="height: 169px;"></a>
+          <a href="toran-116.html"><img class="activator" src="images/galleries/198/thumb/116-toran-6ft.jpg?1352909261" style="height: 169px;"></a>
         </div>
         <div class="card-content">
-          <p><a href="product_198.html" style="color:#17a2a2;">Toran-116</a></p>
+          <p><a href="toran-116.html" style="color:#17a2a2;">Toran-116</a></p>
         </div>
         
       </div>
@@ -148,6 +150,13 @@
               <li><a style="color:#909090;" class = ""   href="terms.html">Terms & Conditions</a></li>  
             </ul>
           </div>
+          <div class="col l4 s12">
+            <ul>
+              <li>
+                <a id="callmebutton_2" style="color:#909090;" class = "" href="tel:9999999999">call now - 9999999999</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="footer-copyright">
@@ -170,6 +179,8 @@ $(document).ready(function(){
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   } else {
     $('#callmebutton').attr('href', '#');
+    $('#callmebutton_1').attr('href', '#');
+    $('#callmebutton_2').attr('href', '#');
 
     $("#callmebutton").on( "click", function() {
       $('#callmebutton').replaceWith('<p class="small button" id="callmebutton">Call Me on 9987760244</p>');
@@ -194,6 +205,29 @@ $(function () {
     body_content += 'Email : ' + email + '%0D%0A';
     body_content += 'Phone : ' + phone + '%0D%0A';
     body_content += 'Message : ' + textarea1 + '%0D%0A';
+
+    var emailBody = body_content;
+
+    //var emailBody = 'Some blah%0D%0ASome blah';
+    window.location = 'mailto:' + email1 + '?subject=' + subject + '&body=' +   emailBody;
+  });
+
+  $('#orderbutton').on('click', function (event) {
+    event.preventDefault();
+    
+    var email1 = 'aaron@kodeplay.com';
+    var subject = 'New Order';
+
+    p_name = $("input[name=product_name]").val();
+    p_price = $("input[name=product_price]").val();
+    quantity = 1;
+    address = 'Please Enter your Shipping address';
+    //textarea1 = textarea1.replace('\n', '%0D%0A');
+    
+    body_content = 'Product Name : ' + p_name + '%0D%0A';
+    body_content += 'Product Price : ' + p_price + '%0D%0A';
+    body_content += 'Quantity : ' + quantity + '%0D%0A';
+    body_content += 'SHipping Address : ' + address + '%0D%0A';
 
     var emailBody = body_content;
 
