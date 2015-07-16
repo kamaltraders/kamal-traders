@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>Kamal Traders - Straw Pipe-507</title>
+    <title>Kamal Traders - Order Form</title>
 
     <!-- CSS  -->
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -42,26 +42,42 @@
             <li><a style="color:#909090;" class = ""  href = "contact.html">Contact Us</a></li>
          </ul>
       </nav>
-        <div class="row container">
-  <hr>
-  <div class="large-5 columns">
-    <img src="images/mains/220/original/DSC_2455.jpg?1352909261" style="min-height:200px;">
-  </div>
-  <div class="large-5 columns">
-    <h4>Straw Pipe-507</h4>
-    <p>Home Decoration, Ofiice Decorations at reasonable rates.
-
-Order Now.</p>
-    <div class="panel">
-      <form METHOD="LINK" ACTION="orders.html">
-        <h5 id="price">Price : &#8377 19.99</h5>
-        <a href="tel:9322697425" class="small button" id="callmebutton">Call Me</a>
-        <input type="submit" value="Order Now" class="button small" />
-        <input type="hidden" name="product_name" value="Straw Pipe-507" />
-        <input type="hidden" name="product_price" value="&#8377 19.99" />
-      </form>
+        <h1 class = "blue-text text-darken-4">Order Form</h1>
+<br/>
+<br/>
+<div class="row container">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="hidden" name="utf8" value="✓">
+        <input id="product_name" name="product_name" type="text" class="" readonly="readonly">
+        <label class = "active" for="product_name">Product Name</label>
+      </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="product_price" type="text" name="product_price" class="" readonly="readonly">
+        <label for="product_price">Product Price</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="product_quantity" type="text" name="product_quantity" class="validate">
+        <label for="product_quantity">Product Quantity</label>
+        <div id="product_quantity_e" style="color:red;"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="shipping" class="materialize-textarea" name="shipping" style="white-space: pre-wrap;"></textarea>
+        <label for="shipping">Shipping Address</label>
+        <div id="shipping_e" style="color:red;"></div>
+      </div>
+    </div>
+    <button class="blue darken-3 btn waves-effect waves-light" type="submit" id="orderbutton" name="action">Submit
+      <i class="mdi-content-send right"></i>
+    </button>
+  </form>
 </div>
     </div>
 

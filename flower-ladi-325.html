@@ -51,11 +51,13 @@
     <h4>Flower Ladi-325</h4>
     <p> - </p>
     <div class="panel">
-      <h5 id="price">Price : &#8377 70.00</h5>
-      <a href="tel:9322697425" class="small button" id="callmebutton">Call Me</a>
-      <a class="small button" id="orderbutton">Order Now</a>
-      <input type="hidden" name="product_name" value="Flower Ladi-325" />
-      <input type="hidden" name="product_price" value="&#8377 70.00" />
+      <form METHOD="LINK" ACTION="orders.html">
+        <h5 id="price">Price : &#8377 70.00</h5>
+        <a href="tel:9322697425" class="small button" id="callmebutton">Call Me</a>
+        <input type="submit" value="Order Now" class="button small" />
+        <input type="hidden" name="product_name" value="Flower Ladi-325" />
+        <input type="hidden" name="product_price" value="&#8377 70.00" />
+      </form>
     </div>
   </div>
 </div>
@@ -112,8 +114,24 @@ $(document).ready(function(){
     $('#callmebutton_2').attr('href', '#');
 
     $("#callmebutton").on( "click", function() {
-      $('#callmebutton').replaceWith('<p class="small button" id="callmebutton">Call Me on 9987760244</p>');
+      $('#callmebutton').replaceWith('<p class="small button" id="callmebutton">Call Me on 9322697425</p>');
     });
+  }
+
+  path_name = window.location.pathname;
+  path_res = path_name.indexOf("orders");
+  if(path_res > 0) {
+    a = window.location;
+    b = a.search;
+    c = b.split('?product_name=');
+    d = c[1];
+    e = d.split('&product_price=');
+    product_name = decodeURIComponent(e[0]);
+    f = e[1].replace('+', ' ');
+    product_price = decodeURIComponent(f);
+
+    $('#product_name').val(product_name);
+    $('#product_price').val(product_price);
   }
 });
 
@@ -129,7 +147,56 @@ $(function () {
     phone = $('#phone').val();
     textarea1 = encodeURIComponent($('#textarea1').val());
     //textarea1 = textarea1.replace('\n', '%0D%0A');
+
+    $('#name_e').html('');
+    $('#email_e').html('');
+    $('#phone_e').html('');
+    $('#message_e').html('');
+
+    $('#name').css({"border-bottom" : "1px solid #9e9e9e", "border-shadow" : "0 0 0 0 solid #9e9e9e"});
+    $('#email').css({"border-bottom" : "1px solid #9e9e9e", "border-shadow" : "0 0 0 0 solid #9e9e9e"});
+    $('#phone').css({"border-bottom" : "1px solid #9e9e9e", "border-shadow" : "0 0 0 0 solid #9e9e9e"});
+    $('#textarea1').css({"border-bottom" : "1px solid #9e9e9e", "border-shadow" : "0 0 0 0 solid #9e9e9e"});
+
+    if(name == ''){
+      $('#name').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+      $('#name_e').html('Please Enter Name');
+      return false;
+    }
+
+    if(email == ''){
+      $('#email').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+      $('#email_e').html('Please Enter Email');
+      return false;
+    }
+
+    email_val = validateEmail(email);
+    if(email_val === false){
+      $('#email').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+      $('#email_e').html('Please Enter valid Email');
+      return false;
+    }
     
+    if(phone == ''){
+      $('#phone').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+      $('#phone_e').html('Please Enter Phone Number');
+      return false;
+    }
+
+    var phoneNum = phone.replace(/[^\d]/g, '');
+    if(phoneNum.length >= 10 && phoneNum.length < 12) {  
+    } else {
+      $('#phone').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+      $('#phone_e').html('Please Enter valid Phone Number');
+      return false;
+    }
+
+    if(textarea1 == ''){
+      $('#textarea1').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+      $('#message_e').html('Please Enter Message');
+      return false;
+    }
+
     body_content = 'Name : ' + name + '%0D%0A';
     body_content += 'Email : ' + email + '%0D%0A';
     body_content += 'Phone : ' + phone + '%0D%0A';
@@ -149,9 +216,27 @@ $(function () {
 
     p_name = $("input[name=product_name]").val();
     p_price = $("input[name=product_price]").val();
-    quantity = 1;
-    address = 'Please Enter your Shipping address';
+    quantity = $("input[name=product_quantity]").val();
+    address = encodeURIComponent($("#shipping").val());
     //textarea1 = textarea1.replace('\n', '%0D%0A');
+
+    $('#product_quantity_e').html('');
+    $('#shipping_e').html('');
+    
+    $('#product_quantity').css({"border-bottom" : "1px solid #9e9e9e", "border-shadow" : "0 0 0 0 solid #9e9e9e"});
+    $('#shipping').css({"border-bottom" : "1px solid #9e9e9e", "border-shadow" : "0 0 0 0 solid #9e9e9e"});
+    
+    if(quantity == '' || quantity == 0){
+      $('#product_quantity').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+      $('#product_quantity_e').html('Please Enter Quantity');
+      return false;
+    }
+
+    if(address == ''){
+      $('#shipping').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+      $('#shipping_e').html('Please Enter Shippign Address');
+      return false;
+    }
     
     body_content = 'Product Name : ' + p_name + '%0D%0A';
     body_content += 'Product Price : ' + p_price + '%0D%0A';
