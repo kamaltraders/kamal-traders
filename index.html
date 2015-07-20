@@ -158,7 +158,7 @@
         <div class="card-image waves-effect waves-block waves-light">
           <a href="torans.html"><img style="height:250px;" class="activator" src="images/30.jpg"></a>
         </div>
-        <div class="card-content">
+        <div class="card-content" style="min-height:16%;">
           
           <p><a href="torans.html" style="color:#17a2a2;">Torans</a></p>
         </div>
@@ -170,7 +170,7 @@
         <div class="card-image waves-effect waves-block waves-light">
           <a href="bouquet.html"><img style="height:250px;" class="activator" src="images/31.jpg"></a>
         </div>
-        <div class="card-content">
+        <div class="card-content" style="min-height:16%;">
           
           <p><a href="bouquet.html" style="color:#17a2a2;">Bouquet</a></p>
         </div>
@@ -182,7 +182,7 @@
         <div class="card-image waves-effect waves-block waves-light">
           <a href="flower-gate.html"><img style="height:250px;" class="activator" src="images/32.jpg"></a>
         </div>
-        <div class="card-content">
+        <div class="card-content" style="min-height:16%;">
           
           <p><a href="flower-gate.html" style="color:#17a2a2;">Flower Gate</a></p>
         </div>
@@ -194,7 +194,7 @@
         <div class="card-image waves-effect waves-block waves-light">
           <a href="decorative-items.html"><img style="height:250px;" class="activator" src="images/33.jpg"></a>
         </div>
-        <div class="card-content">
+        <div class="card-content" style="min-height:16%;">
           
           <p><a href="decorative-items.html" style="color:#17a2a2;">Decorative Items</a></p>
         </div>
@@ -206,7 +206,7 @@
         <div class="card-image waves-effect waves-block waves-light">
           <a href="flower-hangings-ladi.html"><img style="height:250px;" class="activator" src="images/34.jpg"></a>
         </div>
-        <div class="card-content">
+        <div class="card-content" style="min-height:16%;">
           
           <p><a href="flower-hangings-ladi.html" style="color:#17a2a2;">Flower Hangings/Ladi</a></p>
         </div>
@@ -218,7 +218,7 @@
         <div class="card-image waves-effect waves-block waves-light">
           <a href="jhumars.html"><img style="height:250px;" class="activator" src="images/35.jpg"></a>
         </div>
-        <div class="card-content">
+        <div class="card-content" style="min-height:16%;">
           
           <p><a href="jhumars.html" style="color:#17a2a2;">Jhumars</a></p>
         </div>
@@ -230,7 +230,7 @@
         <div class="card-image waves-effect waves-block waves-light">
           <a href="flower-rings.html"><img style="height:250px;" class="activator" src="images/36.jpg"></a>
         </div>
-        <div class="card-content">
+        <div class="card-content" style="min-height:16%;">
           
           <p><a href="flower-rings.html" style="color:#17a2a2;">Flower Rings</a></p>
         </div>
@@ -242,7 +242,7 @@
         <div class="card-image waves-effect waves-block waves-light">
           <a href="garlands-haar.html"><img style="height:250px;" class="activator" src="images/37.jpg"></a>
         </div>
-        <div class="card-content">
+        <div class="card-content" style="min-height:16%;">
           
           <p><a href="garlands-haar.html" style="color:#17a2a2;">Garlands/Haar</a></p>
         </div>
@@ -280,9 +280,12 @@
           </div>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container" style="color:#17a2a2;">
-          © 2015 Copyright Kamal Traders
+      <div class="row" style="max-width: 80%; color:#17a2a2;">
+        <div class="col s6">© 2015 Copyright Kamal Traders</div>
+        <div class="col s6" style="text-align: right;">
+          Site made with 
+          <span style="color: #ff0000;">❤</span> 
+          by <a href="http://kodeplay.com"><img alt="website develpment in mumbai" src="http://kodeplay.com/images/kodeplay.png" style="width:120px; height:12px;" /></a> in Mumbai
         </div>
       </div>
     </footer> 
@@ -373,13 +376,13 @@ $(function () {
       return false;
     }
 
-    var phoneNum = phone.replace(/[^\d]/g, '');
-    if(phoneNum.length >= 10 && phoneNum.length < 12) {  
-    } else {
-      $('#phone').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
-      $('#phone_e').html('Please Enter valid Phone Number');
-      return false;
-    }
+    // var phoneNum = phone.replace(/[^\d]/g, '');
+    // if(phoneNum.length >= 10 && phoneNum.length < 12) {  
+    // } else {
+    //   $('#phone').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+    //   $('#phone_e').html('Please Enter valid Phone Number');
+    //   return false;
+    // }
 
     if(textarea1 == ''){
       $('#textarea1').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
@@ -431,13 +434,13 @@ $(function () {
       return false;
     }
 
-    var phoneNum1 = phone1.replace(/[^\d]/g, '');
-    if(phoneNum1.length >= 10 && phoneNum1.length < 12) {  
-    } else {
-      $('#phone1').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
-      $('#phone_e1').html('Please Enter valid Phone Number');
-      return false;
-    }
+    // var phoneNum1 = phone1.replace(/[^\d]/g, '');
+    // if(phoneNum1.length >= 10 && phoneNum1.length < 12) {  
+    // } else {
+    //   $('#phone1').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+    //   $('#phone_e1').html('Please Enter valid Phone Number');
+    //   return false;
+    // }
 
     if(address == ''){
       $('#shipping').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});

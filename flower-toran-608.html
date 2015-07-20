@@ -96,9 +96,12 @@ Quality Material at reasonable rates.
           </div>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container" style="color:#17a2a2;">
-          © 2015 Copyright Kamal Traders
+      <div class="row" style="max-width: 80%; color:#17a2a2;">
+        <div class="col s6">© 2015 Copyright Kamal Traders</div>
+        <div class="col s6" style="text-align: right;">
+          Site made with 
+          <span style="color: #ff0000;">❤</span> 
+          by <a href="http://kodeplay.com"><img alt="website develpment in mumbai" src="http://kodeplay.com/images/kodeplay.png" style="width:120px; height:12px;" /></a> in Mumbai
         </div>
       </div>
     </footer> 
@@ -189,13 +192,13 @@ $(function () {
       return false;
     }
 
-    var phoneNum = phone.replace(/[^\d]/g, '');
-    if(phoneNum.length >= 10 && phoneNum.length < 12) {  
-    } else {
-      $('#phone').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
-      $('#phone_e').html('Please Enter valid Phone Number');
-      return false;
-    }
+    // var phoneNum = phone.replace(/[^\d]/g, '');
+    // if(phoneNum.length >= 10 && phoneNum.length < 12) {  
+    // } else {
+    //   $('#phone').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+    //   $('#phone_e').html('Please Enter valid Phone Number');
+    //   return false;
+    // }
 
     if(textarea1 == ''){
       $('#textarea1').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
@@ -247,13 +250,13 @@ $(function () {
       return false;
     }
 
-    var phoneNum1 = phone1.replace(/[^\d]/g, '');
-    if(phoneNum1.length >= 10 && phoneNum1.length < 12) {  
-    } else {
-      $('#phone1').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
-      $('#phone_e1').html('Please Enter valid Phone Number');
-      return false;
-    }
+    // var phoneNum1 = phone1.replace(/[^\d]/g, '');
+    // if(phoneNum1.length >= 10 && phoneNum1.length < 12) {  
+    // } else {
+    //   $('#phone1').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
+    //   $('#phone_e1').html('Please Enter valid Phone Number');
+    //   return false;
+    // }
 
     if(address == ''){
       $('#shipping').css({"border-bottom" : "1px solid red", "border-shadow" : "0 1px 0 0 solid red"});
