@@ -17,30 +17,51 @@
         <a style = "cursor:pointer;font-size:24px;" href = "http://kamaltraders.in">
           <img src='images/kamal_traders.png' style="height:60px;">
         </a>
-        <div style="display:inline;float:right;margin-top:15px;font-size:24px;">
+        <div class="call_me" style="display:inline;float:right;margin-top:15px;font-size:24px;">
           <a id="callmebutton_1" style="color:#17a2a2;" class = "" href="tel:9322697425">Call Now - 9322697425</a>
         </div>
       </div>
-        
-      <nav id="primary_nav_wrap">
-         <ul class = blue-text text-darken-4>
-            <li><a style="color:#909090;" class = "bold" href = "index.html">Home</a></li>
-            <li><a style="color:#909090;" class = ""  href = "torans.html">Categories</a>
-              <ul>
-                <li><a href="torans.html" style="color:#909090;">Torans</a></li>
-                <li><a href="bouquet.html" style="color:#909090;">Bouquet</a></li>
-                <li><a href="flower-gate.html" style="color:#909090;">Flower Gate</a></li>
-                <li><a href="decorative-items" style="color:#909090;">Decorative Items</a></li>
-                <li><a href="flower-hangings-ladi" style="color:#909090;">Flower Hangings/Ladi</a></li>
-                <li><a href="jhumars" style="color:#909090;">Jhumars</a></li>
-                <li><a href="flower-rings" style="color:#909090;">Flower Rings</a></li>
-                <li><a href="garlands-haar" style="color:#909090;">Garlands/Haar</a></li>
-              </ul>
-            </li>
-            <li><a style="color:#909090;" class = ""  href = "products.html">All Products</a></li>
-            <li><a style="color:#909090;" class = ""  href = "aboutus.html">About Us</a></li>
-            <li><a style="color:#909090;" class = ""  href = "contact.html">Contact Us</a></li>
-         </ul>
+      
+      <!-- Dropdown Structure -->
+      
+      <ul id="dropdown2" class="dropdown-content" style="width:210px !important; z-index:10;">
+        <li><a style="color:#909090;" href="torans.html">Torans</a></li>
+        <li><a href="bouquet.html" style="color:#909090;">Bouquet</a></li>
+        <li><a href="flower-gate.html" style="color:#909090;">Flower Gate</a></li>
+        <li><a href="decorative-items" style="color:#909090;">Decorative Items</a></li>
+        <li><a href="flower-hangings-ladi" style="color:#909090;">Flower Hangings/Ladi</a></li>
+        <li><a href="jhumars" style="color:#909090;">Jhumars</a></li>
+        <li><a href="flower-rings" style="color:#909090;">Flower Rings</a></li>
+        <li><a href="garlands-haar" style="color:#909090;">Garlands/Haar</a></li>
+      </ul>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a style="color:#909090;" href="torans.html">Torans</a></li>
+        <li><a href="bouquet.html" style="color:#909090;">Bouquet</a></li>
+        <li><a href="flower-gate.html" style="color:#909090;">Flower Gate</a></li>
+        <li><a href="decorative-items" style="color:#909090;">Decorative Items</a></li>
+        <li><a href="flower-hangings-ladi" style="color:#909090;">Flower Hangings/Ladi</a></li>
+        <li><a href="jhumars" style="color:#909090;">Jhumars</a></li>
+        <li><a href="flower-rings" style="color:#909090;">Flower Rings</a></li>
+        <li><a href="garlands-haar" style="color:#909090;">Garlands/Haar</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" data-activates="mobile-demo" class="button-collapse" style="color:#909090;"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-med-and-down blue-text text-darken-4">
+            <li><a style="color:#909090;" href="index.html">Home</a></li>
+            <li><a style="color:#909090;" class="dropdown-button" href="#!" data-activates="dropdown2">Categories<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+            <li><a style="color:#909090;" href = "products.html">All Products</a></li>
+            <li><a style="color:#909090;" href = "aboutus.html">About Us</a></li>
+            <li><a style="color:#909090;" href = "contact.html">Contact Us</a></li>
+          </ul>
+          <ul class="side-nav blue-text text-darken-4" id="mobile-demo">
+            <li><a style="color:#909090;" href="sass.html">Home</a></li>
+            <li><a style="color:#909090;" class="dropdown-button" href="#!" data-activates="dropdown1">Categories<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+            <li><a style="color:#909090;" href = "products.html">All Products</a></li>
+            <li><a style="color:#909090;" href = "aboutus.html">About Us</a></li>
+            <li><a style="color:#909090;" href = "contact.html">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
         <p>Deleniti laboriosam soluta animi non corrupti. labore est quasi omnis ducimus. facere pariatur molestiae eum vel dignissimos debitis quam et id</p>
 
@@ -86,11 +107,11 @@
         </div>
       </div>
       <div class="row" style="max-width: 80%; color:#17a2a2;">
-        <div class="col s6">© 2015 Copyright Kamal Traders</div>
-        <div class="col s6" style="text-align: right;">
+        <div class="col s6 mobile-copy">© 2015 Copyright Kamal Traders</div>
+        <div class="col s6 mobile-brand" style="text-align: right;">
           <a href="http://kodeplay.com">Site made with 
           <span style="color: #ff0000;">❤</span> 
-          by <img alt="website develpment in mumbai" src="http://kodeplay.com/images/kodeplay.png" style="width:120px; height:12px;" /> in Mumbai</a>
+          by <img class = "mobile-kp-logo" alt="website develpment in mumbai" src="http://kodeplay.com/images/kodeplay.png" style="width:120px; height:12px;" /> in Mumbai</a>
         </div>
       </div>
     </footer> 
@@ -101,10 +122,14 @@
     <script src="js/main.js"></script>
 
     <script type = "text/javascript">
+$(document).ready(function(){
+  $(".button-collapse").sideNav();
+});
 
 $(document).ready(function(){
   $('.slider').slider({full_width: true});
   $('select').material_select();
+  
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   } else {
     $('#callmebutton').attr('href', '#');

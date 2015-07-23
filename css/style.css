@@ -2612,3 +2612,24 @@ button::-moz-focus-inner {
 {
   display:block
 }
+
+@media only screen and (max-width: 600px){
+  .call_me {
+    margin-top: 32px !important;
+    font-size: 18px !important;
+  }
+
+  .mobile-h3 {
+    font-size: 1.4rem !important;
+    text-align: center !important;
+  }
+
+  .mobile-copy, .mobile-brand {
+    font-size: 12px;
+  }
+
+  .mobile-kp-logo {
+    width: 98px !important;
+    height: 10px !important;
+  }
+}
